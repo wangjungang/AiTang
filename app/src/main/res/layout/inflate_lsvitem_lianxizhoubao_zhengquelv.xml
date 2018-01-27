@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40pt"
+    android:background="@color/color_white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_inflate_lxzb_zql_type"
+        android:layout_width="210pt"
+        android:layout_height="wrap_content"
+        android:text="言语理解与表达"
+        android:textColor="@color/color_323232"
+        android:textSize="30pt" />
+    <!--android:thumb="@null" 不显示小圆球-->
+    <SeekBar
+        android:id="@+id/sb_inflate_lxzb_zql_sb"
+        android:layout_width="0pt"
+        android:layout_height="12pt"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="30pt"
+        android:layout_weight="1"
+        android:max="100"
+        android:progressTint="@color/color_FF9B19"
+        android:progress="34"
+        android:progressBackgroundTint="@color/color_E5E5E5"
+        android:thumb="@null" />
+
+    <TextView
+        android:id="@+id/tv_inflate_lxzb_zql_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74pt"
+        android:text="12"
+        android:textColor="@color/color_FF9B19"
+        android:textSize="36pt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2pt"
+        android:text="%"
+        android:textColor="@color/color_646464"
+        android:textSize="26pt" />
+
+</LinearLayout>

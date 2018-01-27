@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="circle_radis">50pt</dimen>
+
+
+    <!--知乎配置的显示高度-->
+    <dimen name="grid_expected_size">120dp</dimen>
+
+    /*18sp大小*/
+    <dimen name="txt_18sp">34pt</dimen>
+    /*16sp大小*/
+    <dimen name="txt_16sp">32pt</dimen>
+    <dimen name="txt_32pt">32pt</dimen>
+    /*14sp大小*/
+    <dimen name="txt_14sp">28pt</dimen>
+    <dimen name="txt_28pt">28pt</dimen>
+    /*12sp大小*/
+    <dimen name="txt_12sp">24pt</dimen>
+
+    /*分割线高度*/
+    <dimen name="line_height">2pt</dimen>
+    /*边距*/
+    <dimen name="margin_16dp">32pt</dimen>
+    <dimen name="margin_10dp">20pt</dimen>
+    <dimen name="margin_top_15dp">30pt</dimen>
+    <dimen name="margin_20dp">40pt</dimen>
+    <dimen name="margin_50dp">100pt</dimen>
+
+    <dimen name="margin_26pt">26pt</dimen>
+    <dimen name="margin_30pt">30pt</dimen>
+    /*View高度*/
+    <dimen name="edit_height_45dp">90pt</dimen>
+    <dimen name="view_group_height_50dp">100pt</dimen>
+
+    /*个人设置中右箭头的高度*/
+    <dimen name="go_height_20dp">40pt</dimen>
+
+
+</resources>

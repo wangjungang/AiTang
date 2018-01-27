@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_08D2B2</item>
+        <item name="colorPrimaryDark">@color/color_08D2B2</item>
+        <item name="colorAccent">@color/color_08D2B2</item>
+    </style>
+
+
+    <!--透明activity-->
+    <style name="Transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+
+    <style name="wm_w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+
+    <!--字体样式-->
+
+    <style name="text_style_14sp_black">
+        <item name="android:textColor">@color/color_text_black_54</item>
+        <item name="android:textSize">@dimen/txt_14sp</item>
+    </style>
+
+    <style name="text_style_16sp_black">
+        <item name="android:textColor">@color/color_text_black_54</item>
+        <item name="android:textSize">@dimen/txt_16sp</item>
+    </style>
+
+    <!--分割线样式-->
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:background">@color/color_line</item>
+    </style>
+
+    <!--按钮样式-->
+    <style name="btn_style">
+        <item name="android:layout_width">360pt</item>
+        <item name="android:layout_height">90pt</item>
+        <item name="android:background">@color/color_08D2B2</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">@dimen/txt_16sp</item>
+    </style>
+
+    <!--绿色小标题样式-->
+    <style name="green_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_group_height_50dp</item>
+        <item name="android:background">@color/color_08D2B2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/margin_16dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">@dimen/txt_16sp</item>
+    </style>
+
+
+
+    <!--自定义知乎选择照片的主题-->
+    <style name="Matisse.AiTang" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_08D2B2</item>
+        <item name="colorPrimaryDark">@color/color_08D2B2</item>
+        <item name="toolbar">@style/Toolbar.AiTang</item>
+        <item name="album.title.color">@color/zhihu_album_title_text</item>
+        <item name="album.count.color">@color/zhihu_album_count_text</item>
+        <item name="album.selected">@android:color/white</item>
+        <item name="album.placeholder">@color/zhihu_album_placeholder</item>
+        <item name="album.emptyView">@drawable/ic_empty_zhihu</item>
+        <item name="album.emptyView.color">@color/zhihu_empty_view</item>
+        <item name="item.placeholder">@color/zhihu_item_placeholder</item>
+        <item name="page.bg">@color/zhihu_page_bg</item>
+        <item name="bottomToolbar.bg">@color/zhihu_bottom_toolbar_bg</item>
+        <item name="bottomToolbar.preview.color">@color/zhihu_bottom_toolbar_preview</item>
+        <item name="bottomToolbar.apply.color">@color/color_08D2B2</item>
+        <item name="listPopupWindowStyle">@style/Popup.AiTang</item>
+        <item name="capture.color">@color/zhihu_capture</item>
+    </style>
+    <style name="Popup.AiTang" parent="Widget.AppCompat.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/zhihu_album_popup_bg</item>
+    </style>
+    <style name="Toolbar.AiTang" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
+</resources>

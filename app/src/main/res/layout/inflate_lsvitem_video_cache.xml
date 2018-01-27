@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sl_convertView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp">
+
+
+    <!--项目中我是任意复杂的原ContentItem布局-->
+    <LinearLayout
+        android:id="@+id/ll_itemview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="25pt"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:paddingTop="@dimen/margin_20dp">
+
+
+            <!--文字-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:textSize="36pt"
+                    android:textColor="@color/color_323232"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="如何突破笔试难关" />
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:text="课程摘要：两个月突破笔试难关"
+                    android:textSize="30pt"
+                    android:textColor="@color/color_646464"/>
+                <!--时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/timeyellow_icon_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20pt"
+                        android:textColor="@color/color_909090"
+                        android:textSize="@dimen/txt_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:orientation="horizontal">
+                    <!--头像-->
+                    <ImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="130pt"
+                        android:layout_height="130pt" />
+                    <!--老师介绍-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20pt"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_teacher_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="林可为"
+                            android:textColor="@color/color_323232"
+                            android:textSize="@dimen/txt_14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_teacher_intro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:text="#笔试科目知名讲师"
+                            android:textColor="@color/color_646464"
+                            android:textSize="24pt" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--播放按钮-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+
+                <ImageView
+                    android:id="@+id/btn_play"
+                    android:layout_width="80pt"
+                    android:layout_height="80pt"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bofang_icon_kechenghuancun" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.example.administrator.aitang.views.HorizontalProgressBarWithNumber
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="20pt"
+            android:layout_marginRight="26pt"
+            android:layout_marginLeft="26pt"
+            android:layout_marginBottom="15pt"
+            android:progressTint="@color/color_08D2B2"
+            />
+    </LinearLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_FF9B19"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

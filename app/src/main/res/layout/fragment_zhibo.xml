@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="88pt"
+        android:layout_marginTop="10pt" />
+
+    <TextView
+        android:id="@+id/tv_zhibofrg_myclass"
+        android:layout_width="match_parent"
+        android:layout_height="88pt"
+        android:background="@color/color_08D2B2"
+        android:drawableEnd="@drawable/right_button_zhiboshouye"
+        android:gravity="center_vertical"
+        android:paddingEnd="25pt"
+
+        android:paddingStart="25pt"
+        android:text="我的课程"
+        android:textColor="@color/color_white"
+        android:textSize="32pt" />
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lsv_zhibo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="2px"
+            android:listSelector="@color/touming"
+            android:paddingEnd="24pt"
+            android:paddingStart="20pt"
+            android:scrollbars="none"
+            android:text="@string/hello_blank_fragment" />
+
+    </com.andview.refreshview.XRefreshView>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:layout_above="@+id/radiogroup_bottom" />
+
+    <View style="@style/line_style" />
+
+    <!--  android:background="@color/color_FEFEFE" -->
+    <RadioGroup
+        android:id="@+id/radiogroup_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10pt"
+        android:paddingTop="10pt"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/rb_lianxi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tv_lianxi_selector"
+            android:gravity="center"
+            android:text="练习"
+            android:textColor="@drawable/radiobutton_text_selector"
+            android:textSize="24pt" />
+
+        <RadioButton
+            android:id="@+id/rb_zhibo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableTop="@drawable/tv_zhibo_selector"
+            android:gravity="center"
+            android:text="直播课"
+            android:textColor="@drawable/radiobutton_text_selector"
+            android:textSize="24pt" />
+
+        <RadioButton
+            android:id="@+id/rb_wode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableTop="@drawable/tv_wode_selector"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/radiobutton_text_selector"
+            android:textSize="24pt" />
+    </RadioGroup>
+</LinearLayout>

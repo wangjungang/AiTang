@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--账号信息-->
+            <RelativeLayout
+                android:id="@+id/rl_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:background="@color/color_08D2B2"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    android:id="@+id/tv_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_info"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100pt"
+                    android:layout_toRightOf="@+id/tv_name_label"
+                    android:layout_toLeftOf="@+id/iv_go"
+                    android:text=""
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/txt_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_go"
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:src="@drawable/right_button_zhiboshouye" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--考试类型-->
+            <RelativeLayout
+                android:id="@+id/rl_exam_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/exam_type" />
+
+
+                <TextView
+                    android:id="@+id/tv_exam_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_go1"
+                    android:text=""
+                    android:textColor="@color/color_text_black_54"
+                    android:textSize="@dimen/txt_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_go1"
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--代金券-->
+            <RelativeLayout
+                android:id="@+id/rl_cash_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/cash_coupon" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--爱唐播报-->
+            <RelativeLayout
+                android:id="@+id/rl_broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/aitang_broadcast" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+
+            <!--&lt;!&ndash;直播课程提醒&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/view_group_height_50dp"-->
+                <!--android:paddingLeft="@dimen/margin_16dp"-->
+                <!--android:paddingRight="@dimen/margin_16dp">-->
+
+                <!--<TextView-->
+                    <!--style="@style/text_style_16sp_black"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="@dimen/view_group_height_50dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="@string/live_reminder" />-->
+
+                <!--<ToggleButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<View style="@style/line_style" />-->
+
+
+            <!--课程缓存-->
+            <RelativeLayout
+                android:id="@+id/rl_course_cache"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/course_cache" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--问题反馈-->
+            <RelativeLayout
+                android:id="@+id/rl_question_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/question_feedback" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--山东名师琅琊榜-->
+            <RelativeLayout
+                android:id="@+id/rl_teacher_rankings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/teacher_rankings" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+
+            <!--当前版本-->
+            <RelativeLayout
+                android:id="@+id/rl_version"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/current_version" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_go2"
+                    android:text=""
+                    android:textSize="@dimen/txt_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_go2"
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:src="@drawable/weizhankai_button_default"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <!--联系我们-->
+            <RelativeLayout
+                android:id="@+id/rl_contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_group_height_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_us" />
+
+                <ImageView
+                    android:layout_width="@dimen/go_height_20dp"
+                    android:layout_height="@dimen/go_height_20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/weizhankai_button_default" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

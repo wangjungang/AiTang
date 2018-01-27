@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.mine.ContactUsActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--微信公众号-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:background="@color/color_08D2B2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:text="@string/weixin_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/txt_16sp" />
+
+            <TextView
+                android:id="@+id/tv_wechat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <!--官网-->
+        <RelativeLayout
+            android:id="@+id/rl_cash_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/website" />
+
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+
+        <!--客服-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/customer_service" />
+
+            <TextView
+                android:id="@+id/tv_custom_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+
+        <!--客服电话-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/customer_service_phone" />
+
+            <TextView
+                android:id="@+id/tv_custom_service_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+
+        <!--客服微信-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/customer_service_wexin" />
+
+            <TextView
+                android:id="@+id/tv_custom_service_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+
+        <!--办公地址-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/address_title" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="320pt"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_wechat"
+                android:layout_width="160pt"
+                android:layout_height="160pt"
+                android:layout_above="@+id/QR_code_tip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/QR_code_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:text="@string/QR_code_tip"
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

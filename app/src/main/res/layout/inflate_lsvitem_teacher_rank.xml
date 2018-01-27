@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:paddingEnd="26pt"
+    android:paddingStart="26pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130pt"
+        android:layout_marginTop="68pt"
+        android:orientation="horizontal">
+        <!--老师的头像-->
+        <ImageView
+            android:id="@+id/tv_inflatelsvitem_lsjs_pic"
+            android:layout_width="130pt"
+            android:layout_height="130pt" />
+        <!--姓名，描述，评分-->
+        <LinearLayout
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_marginStart="57pt"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--姓名-->
+            <TextView
+                android:id="@+id/tv_inflatelsvitem_lsjs_name"
+                android:layout_width="match_parent"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_323232"
+                android:textSize="36pt" />
+            <!--描述-->
+            <TextView
+                android:id="@+id/tv_inflatelsvitem_lsjs_dis"
+                android:layout_width="match_parent"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/color_909090"
+                android:textSize="30pt" />
+            <!--评分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.example.administrator.aitang.views.MyRatingBar
+                    android:id="@+id/tv_inflatelsvitem_lsjs_xingji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:numStars="2"
+                    app:clickable="false"
+                    app:starCount="5"
+                    app:starEmpty="@drawable/linestar_icon_pinglun"
+                    app:starFill="@drawable/staryellow_icon_pinglun"
+                    app:starHalf="@drawable/halfstar_icon_pinglun"
+                    app:starImageSize="20pt"
+                    app:starStep="1"
+                    app:stepSize="Half" />
+                <!--分数-->
+                <TextView
+                    android:id="@+id/tv_inflatelsvitem_lsjs_fenshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_FF9B19"
+                    android:textSize="24pt" />
+                <!--分文字-->
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="分"
+                    android:textColor="@color/color_909090"
+                    android:textSize="24pt" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_inflatelsvitem_lsjs_ckpf"-->
+            <!--android:layout_width="120pt"-->
+            <!--android:layout_height="40pt"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:background="@color/color_08D2B2"-->
+            <!--android:gravity="center"-->
+            <!--android:text="查看评分"-->
+            <!--android:textColor="@color/color_white"-->
+            <!--android:textSize="24pt" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_inflatelsvitem_lsjs_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68pt"
+        android:layout_marginTop="50pt"
+        android:maxLines="4"
+        android:textColor="@color/color_646464"
+        android:textSize="30pt" />
+</LinearLayout>

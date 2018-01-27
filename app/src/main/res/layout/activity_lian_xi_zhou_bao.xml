@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_lianxizhoubaoAct"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.lianxi.LianXiZhouBaoActivity">
+    <!--导航栏-->
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--预测分数和练习时间-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="480pt"
+                android:background="@drawable/background_image_meifenzhong_lianxizhoubao"
+                android:visibility="visible">
+                <!--分数-->
+                <TextView
+                    android:id="@+id/tv_lianxizhoubaoAct_fenshu"
+                    android:layout_width="270pt"
+                    android:layout_height="270pt"
+                    android:layout_marginBottom="165pt"
+                    android:layout_marginEnd="239pt"
+                    android:layout_marginStart="241pt"
+                    android:layout_marginTop="45pt"
+                    android:background="@drawable/circle_background_lianxizhoubao"
+                    android:gravity="center"
+                    android:textColor="#08D2B2"
+                    android:textSize="120pt" />
+                <!--预测分数-->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_lianxizhoubaoAct_shijian"
+                    android:layout_marginBottom="20pt"
+                    android:gravity="center_horizontal"
+                    android:text="预测分数"
+                    android:textColor="@color/color_white"
+                    android:textSize="36pt" />
+                <!--练习时间-->
+                <TextView
+                    android:id="@+id/tv_lianxizhoubaoAct_shijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="26pt"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/color_white"
+                    android:textSize="36pt" />
+
+            </RelativeLayout>
+            <!--相比上周的分数-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="118pt"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_lianxizhoubaoAct_bishangzhou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="36pt"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="上周提高"
+                    android:textColor="@color/color_323232"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tv_lianxizhoubaoAct_bishangzhoufenshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_08D2B2"
+                    android:textSize="60pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26pt"
+                    android:layout_marginStart="30pt"
+                    android:gravity="center_vertical"
+                    android:text="分"
+                    android:textColor="@color/color_909090"
+                    android:textSize="30pt" />
+            </LinearLayout>
+            <!--预测分趋势-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="153pt"
+                android:background="@color/color_F6F6F6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="36pt"
+                    android:layout_marginTop="76pt"
+                    android:layout_weight="1"
+                    android:text="预测分趋势"
+                    android:textColor="@color/color_323232"
+                    android:textSize="30pt" />
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="10pt"
+                    android:layout_marginTop="92pt"
+                    android:background="@drawable/yuce_icon_disabled_lianxizhoubao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26pt"
+                    android:layout_marginStart="30pt"
+                    android:layout_marginTop="76pt"
+                    android:text="我的"
+                    android:textColor="@color/color_909090"
+                    android:textSize="30pt" />
+            </LinearLayout>
+            <!--预测分趋势表的折线图-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="700pt"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingEnd="45pt"
+                android:paddingStart="45pt"
+                android:visibility="visible">
+                <!--折线图-->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/linechart_lianxizhoubaoAct_zhexian"
+                    android:layout_width="match_parent"
+                    android:layout_height="500pt" />
+                <!--本周排名变化和国考排名-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200pt"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!--排名数值-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--本周变化-->
+                        <LinearLayout
+                            android:layout_width="0pt"
+                            android:layout_height="80pt"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_rankUp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="20pt"
+                                android:text=""
+                                android:textColor="@color/color_08D2B2"
+                                android:textSize="60pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10pt"
+                                android:text="名"
+                                android:textColor="@color/color_646464"
+                                android:textSize="26pt" />
+                        </LinearLayout>
+
+                        <!--国考排名-->
+
+
+                        <TextView
+                            android:id="@+id/tv_guoKao_rank"
+                            android:layout_width="0pt"
+                            android:layout_height="80pt"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/color_646464"
+                            android:textSize="26pt" />
+
+
+                    </LinearLayout>
+
+
+                    <!--排名提示语-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0pt"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="本周排名变化"
+                            android:textColor="@color/color_323232"
+                            android:textSize="32pt" />
+
+                        <TextView
+                            android:layout_width="0pt"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="国考排名"
+                            android:textColor="@color/color_323232"
+                            android:textSize="32pt" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="147pt"
+                android:background="@color/color_F6F6F6"
+                android:paddingStart="26pt"
+                android:paddingTop="80pt"
+                android:text="正确率"
+                android:textColor="@color/color_323232"
+                android:textSize="34pt" />
+            <!--正确率-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingBottom="30pt"
+                android:paddingTop="30pt"
+                android:visibility="visible">
+                <!--&lt;!&ndash;正确率的雷达图&ndash;&gt;-->
+                <!--<com.github.mikephil.charting.charts.RadarChart-->
+                <!--android:id="@+id/radarchart_lianxizhoubaoAct_leida"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="600pt" />-->
+
+                <com.example.administrator.aitang.views.MyListView
+                    android:id="@+id/mlsv_lianxizhoubaoAct_zhengquelue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:divider="@color/touming"
+                    android:dividerHeight="38pt"
+                    android:listSelector="@color/touming"
+                    android:paddingEnd="25pt"
+                    android:paddingStart="26pt" />
+            </LinearLayout>
+            <!--每分钟完成题目数-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="147pt"
+                android:background="@color/color_F6F6F6"
+                android:paddingStart="26pt"
+                android:paddingTop="80pt"
+                android:text="每分钟完成题目数"
+                android:textColor="@color/color_323232"
+                android:textSize="34pt" />
+            <!--每分钟完成题目数-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="550pt"
+                    android:background="@drawable/background_image_meifenzhong_lianxizhoubao"
+                    android:orientation="vertical">
+
+
+                    <!--分数-->
+                    <TextView
+                        android:id="@+id/tv_user_minute_timushu"
+                        android:layout_width="260pt"
+                        android:layout_height="260pt"
+                        android:layout_marginEnd="239pt"
+                        android:layout_marginStart="241pt"
+                        android:layout_marginTop="114pt"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_white"
+                        android:textSize="120pt" />
+                    <!--预测分数-->
+                    <TextView
+                        android:id="@+id/tv_quanzhan_pingjuntishu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="60pt"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/color_white"
+                        android:textSize="36pt" />
+                </LinearLayout>
+
+                <com.example.administrator.aitang.views.MyListView
+                    android:id="@+id/mlsv_datishu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30pt"
+                    android:layout_marginTop="30pt"
+                    android:divider="@color/touming"
+                    android:dividerHeight="40pt"
+                    android:listSelector="@color/touming"
+                    android:paddingEnd="26pt"
+                    android:paddingStart="26pt" />
+            </LinearLayout>
+            <!--练习情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="153pt"
+                android:background="@color/color_F6F6F6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="36pt"
+                    android:layout_marginTop="76pt"
+                    android:layout_weight="1"
+                    android:text="练习情况"
+                    android:textColor="@color/color_323232"
+                    android:textSize="30pt" />
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="10pt"
+                    android:layout_marginTop="92pt"
+                    android:background="@drawable/lianxiqingkuang_icon_disable_lianxizhoubao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="26pt"
+                    android:layout_marginStart="30pt"
+                    android:layout_marginTop="76pt"
+                    android:text="上周"
+                    android:textColor="@color/color_909090"
+                    android:textSize="30pt" />
+            </LinearLayout>
+            <!--练习情况的柱形图-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="105pt"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingEnd="45pt"
+                android:paddingStart="45pt"
+                android:visibility="visible">
+                <!--折线图-->
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_lianxizhoubaoAct_zhuxing"
+                    android:layout_width="match_parent"
+                    android:layout_height="600pt"
+                   />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2pt"
+                    android:layout_marginTop="50pt"
+                    android:layout_marginEnd="26pt"
+                    android:layout_marginStart="26pt"
+                    android:background="@color/color_F6F6F6" />
+                <!--上周练习题数和上周全站平均练习-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200pt"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0pt"
+                            android:layout_height="80pt"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_last_week_my_tishu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20pt"
+                                android:text=""
+                                android:textColor="@color/color_08D2B2"
+                                android:textSize="60pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10pt"
+                                android:text="题"
+                                android:textColor="@color/color_646464"
+                                android:textSize="26pt" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0pt"
+                            android:layout_height="80pt"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_last_week_all_tishu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20pt"
+                                android:text=""
+                                android:textColor="@color/color_08D2B2"
+                                android:textSize="60pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10pt"
+                                android:text="题"
+                                android:textColor="@color/color_646464"
+                                android:textSize="26pt" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--题数提示语-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0pt"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="上周练习"
+                            android:textColor="@color/color_323232"
+                            android:textSize="32pt" />
+
+                        <TextView
+                            android:layout_width="0pt"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="上周全站平均练习"
+                            android:textColor="@color/color_323232"
+                            android:textSize="32pt" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

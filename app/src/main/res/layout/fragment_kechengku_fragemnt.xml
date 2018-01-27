@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.aitang.fragment.zhibo.KechengkuFragemnt">
+
+    <LinearLayout
+        android:id="@+id/rl_kechengkuFrg_wukecheng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="130pt"
+            android:layout_height="130pt"
+            android:scaleType="fitXY"
+            android:src="@drawable/wukecheng_icon_kechengrili" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100pt"
+            android:text="没有相关课程"
+            android:textColor="@color/color_BDBDBD"
+            android:textSize="40pt" />
+    </LinearLayout>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lsv_kechengku"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="24pt"
+            android:paddingStart="20pt"
+            android:dividerHeight="2pt"
+            android:listSelector="@color/touming"
+            android:scrollbars="none"
+            android:text="@string/hello_blank_fragment" />
+
+    </com.andview.refreshview.XRefreshView>
+</FrameLayout>

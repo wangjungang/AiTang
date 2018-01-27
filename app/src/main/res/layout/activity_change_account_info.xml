@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.mine.ChangeAccountInfoActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_group_height_50dp"
+        android:background="@color/color_08D2B2"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:text="@string/change_account_info"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/txt_16sp" />
+
+    <!--修改昵称-->
+    <RelativeLayout
+        android:id="@+id/rl_change_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_group_height_50dp"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            style="@style/text_style_16sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:gravity="center_vertical"
+            android:text="@string/change_user_name" />
+
+        <ImageView
+            android:layout_width="@dimen/go_height_20dp"
+            android:layout_height="@dimen/go_height_20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_button_zhiboshouye" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+    <LinearLayout
+        android:id="@+id/ll_pwd_phone_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!--修改密码-->
+        <RelativeLayout
+            android:id="@+id/rl_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/change_pwd" />
+
+            <ImageView
+                android:layout_width="@dimen/go_height_20dp"
+                android:layout_height="@dimen/go_height_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_button_zhiboshouye" />
+
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+        <!--修改手机号-->
+        <RelativeLayout
+            android:id="@+id/rl_change_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                style="@style/text_style_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_group_height_50dp"
+                android:gravity="center_vertical"
+                android:text="@string/change_phone_number" />
+
+            <ImageView
+                android:layout_width="@dimen/go_height_20dp"
+                android:layout_height="@dimen/go_height_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_button_zhiboshouye" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/btn_style"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="200pt"
+            android:text="@string/logout" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

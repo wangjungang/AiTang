@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/item1_1"
+            android:icon="@drawable/shoucangtimu_icon_gengduo"
+            android:title="收藏本题" />
+        <item
+            android:id="@+id/item1_2"
+            android:icon="@drawable/fenxiang_icon"
+            android:title="分享本题" />
+        <item
+            android:id="@+id/item1_3"
+            android:icon="@drawable/cuotiben_icon_gengduo"
+            android:title="加入错题" />
+    </group>
+</menu>

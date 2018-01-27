@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">爱唐公考</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    /*首页忘记密码*/
+    <string name="reset_password">重设密码</string>
+    <string name="input_phone_number">请输入手机号</string>
+    <string name="input_validation_code">请输入手机验证码</string>
+    <string name="input_new_password">请输入新的密码</string>
+    <string name="input_confirm_password">请确认新密码</string>
+    <string name="complete">完成</string>
+    <string name="send_code">发送验证码</string>
+
+
+    /*我的页面*/
+    <string name="account_info">账号信息</string>
+    <string name="exam_type">考试类型</string>
+    <string name="cash_coupon">代金券</string>
+    <string name="aitang_broadcast">爱唐播报</string>
+    <string name="live_reminder">直播课程提醒</string>
+    <string name="course_cache">课程缓存</string>
+    <string name="question_feedback">问题反馈</string>
+    <string name="teacher_rankings">山东名师琅琊榜</string>
+    <string name="current_version">当前版本</string>
+    <string name="contact_us">联系我们</string>
+
+    <string name="change_account_info">修改账号信息</string>
+    <string name="change_user_name">修改昵称</string>
+    <string name="change_pwd">修改密码</string>
+    <!--修改手机号-->
+    <string name="change_phone_number">更换手机号</string>
+    <string name="change_phone_number_1">修改手机号</string>
+    <string name="logout">退出登录</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="phone_tip_1">请输入下方手机号收到的验证码进行验证：</string>
+    <string name="phone_tip_2">#若该手机号停用请联系客服#</string>
+    <string name="phone_tip_3">#验证码将会发送到新的手机#</string>
+    <string name="next">下一步</string>
+    <string name="add_new_phone">添加新的手机号</string>
+    <string name="add_new_phone_hint">点击输入新的手机号</string>
+    <!--修改昵称-->
+    <string name="input_new_user_name">请输入新的昵称</string>
+    <string name="submit_change">提交修改</string>
+    <!--修改密码-->
+    <string name="pwd_tip">请输入下方手机号收到的验证码进行验证</string>
+    <string name="new_pwd">新的密码：</string>
+    <string name="repeat_new_pwd">重复密码：</string>
+    <string name="pwd_hint">不少于6位</string>
+    <string name="pwd_hint_1">再次输入密码</string>
+
+    <!--代金券-->
+    <string name="cash_coupon_tip">每日签到、评论和分享有机会获得现金抵用券哦</string>
+    <string name="course_coupon">课程券</string>
+    <string name="course_coupon_tip">每次限使用一张，少补不退</string>
+    <string name="cash_coupons">现金抵用券</string>
+    <string name="RMB_symbol">￥</string>
+
+
+    <!--问题反馈-->
+    <string name="question_feedback_tip">您的建议与感想对我们非常重要哦</string>
+    <string name="submit_proposal">提交建议</string>
+    <string name="input_hint">点此开始输入</string>
+
+    <!--联系我们-->
+    <string name="weixin_title">微信公众号</string>
+    <string name="weixin_gongzhonghao">爱唐张兵</string>
+    <string name="website">官网</string>
+    <string name="website_url">www.aitang.com</string>
+    <string name="customer_service">客服</string>
+    <string name="customer_service_name">爱唐客服</string>
+    <string name="customer_service_phone">客服电话</string>
+    <string name="customer_service_phone_number">0531-55533599</string>
+    <string name="customer_service_wexin">客服微信</string>
+    <string name="customer_service_weixin_number">wm890216</string>
+    <string name="address_title">办公地址</string>
+    <string name="address">山东省济南市历下区经十路14647号澳利大厦</string>
+    <string name="QR_code_tip">#扫一扫关注公众号#</string>
+
+
+    <!--练习-->
+    <string name="hint_input_dati">点此开始答题</string>
+</resources>

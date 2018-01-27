@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/fl_jieshu_include"
+        android:layout_width="match_parent"
+        android:layout_height="470pt"
+        android:background="@color/color_222222">
+
+        <ImageView
+            android:id="@+id/img_jieshu_include"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:paddingTop="196pt"
+        android:text="直播已经结束，请下载观看"
+        android:textColor="@color/color_646464"
+        android:textSize="36pt" />
+
+    <com.example.administrator.aitang.views.DrawableCenterTextView
+        android:id="@+id/dctv_downloadNotes_include_zhibojieshu"
+        android:layout_width="450pt"
+        android:layout_height="88pt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="100pt"
+        android:adjustViewBounds="true"
+        android:background="@color/color_08D2B2"
+        android:drawablePadding="10pt"
+        android:drawableStart="@drawable/download_icon_zhibojieshu"
+        android:gravity="center_vertical"
+        android:text="下载讲义"
+        android:textColor="@color/color_white"
+        android:textSize="36pt" />
+</LinearLayout>

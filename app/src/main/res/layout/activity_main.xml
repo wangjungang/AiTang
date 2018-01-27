@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andview.refreshview.XRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/xRefreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.aitang.ui.MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="88pt"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="20pt"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:id="@+id/iv_exame_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kechengxuanze_icon_nav"
+            />
+<TextView
+    android:id="@+id/tv_qiandao"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="签到"
+    android:textColor="@color/color_FF9B19"
+    android:textSize="28pt"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="28pt"
+    />
+    </LinearLayout>
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:text="国家公务员考试"
+    android:textSize="34pt"
+    android:layout_weight="1"
+    />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginEnd="20pt"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/message_icon_default_nav"
+            />
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="更多"
+            android:textSize="28pt"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="28pt"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</com.andview.refreshview.XRefreshView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.lianxi.DaTiKa1Activity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <TextView
+        android:id="@+id/tv_datiAct_title"
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:layout_below="@+id/headerview"
+        android:background="@color/color_08D2B2"
+        android:gravity="center_vertical"
+        android:paddingLeft="26pt"
+        android:textColor="#FEFEFE"
+        android:textSize="32pt" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!--ScrollView嵌套GridView，用相对布局会失效-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.administrator.aitang.views.MyGridView
+                android:id="@+id/gv_datiAct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="190pt"
+                android:layout_marginEnd="60pt"
+                android:layout_marginStart="60pt"
+                android:layout_marginTop="190pt"
+                android:horizontalSpacing="30pt"
+                android:listSelector="@color/touming"
+                android:numColumns="6"
+                android:scrollbars="none"
+                android:verticalSpacing="50pt" />
+
+            <Button
+                android:id="@+id/btn_datiAct_tijiao"
+                android:layout_width="400pt"
+                android:layout_height="88pt"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_08D2B2"
+                android:text="交卷并查看结果"
+                android:layout_marginBottom="198pt"
+                android:textColor="#FFFFFF"
+                android:textSize="36pt" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

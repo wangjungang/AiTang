@@ -1,0 +1,86 @@
+{
+  "code": "200",
+  "data": [
+    {
+      "mid": "1",
+      "uid": "2",
+      "c_id": "2",
+      "testid": "2",
+      "mtype": "2",
+      "mtime": "1505202090",
+      "class": {
+        "c_id": "2",
+        "ccid": "3",
+        "c_name": "高分夜班车(第2期)",
+        "c_price": "12",
+        "c_pay_num": "0",
+        "c_start_time": "1511784061",
+        "c_end_time": "1512129661",
+        "c_end_pay": "1503565854",
+        "c_intro_img": "http://55.irapidtech.net/Public/upload/599e98216cd2f.jpg",
+        "c_qq": "213213",
+        "c_type": "2",
+        "time": "1505127739"
+      },
+      "teacher": [
+        {
+          "tid": "2",
+          "tname": "卡卡罗特",
+          "tpic": "http://55.irapidtech.net/Public/upload/300599aa9b8a5c25.jpg",
+          "tintro": "贝吉塔行星的赛亚人。他在小时候以“下级战士”的身份被送到地球。被武道家孙悟饭收养并取名为“孙悟空”。小时候失控变成大猩猩踩死悟饭后独自生活在深山。一日结识少女布玛，从而踏上收集龙珠的大冒险。",
+          "tsimple": "赛亚人",
+          "tscore": "100"
+        }
+      ],
+      "ymdhis": [
+        "1503565478"
+      ],
+      "classnum": 1
+    },
+    {
+      "mid": "2",
+      "uid": "2",
+      "c_id": "1",
+      "testid": "2",
+      "mtype": "2",
+      "mtime": "0",
+      "class": {
+        "c_id": "1",
+        "ccid": "2",
+        "c_name": "高分夜班车(第1期)",
+        "c_price": "10",
+        "c_pay_num": "0",
+        "c_start_time": "1501524183",
+        "c_end_time": "1503482246",
+        "c_end_pay": "1503395505",
+        "c_intro_img": "http://55.irapidtech.net/Public/upload/599c087c1d9df.jpg",
+        "c_qq": "7758458",
+        "c_type": "2",
+        "time": "1505127723"
+      },
+      "teacher": [
+        {
+          "tid": "1",
+          "tname": "妮娜.杜波夫",
+          "tpic": "http://55.irapidtech.net/Public/upload/300599a9044b6ecb.jpg",
+          "tintro": "妮娜·杜波夫，1989年1月9日出生于保加利亚索菲亚，后加入加拿大国籍，加拿大前奥运会体操选手，模特，演员，和业余歌手",
+          "tsimple": "最漂亮的女人",
+          "tscore": "100"
+        },
+        {
+          "tid": "3",
+          "tname": "蒙奇·D·路飞",
+          "tpic": "http://55.irapidtech.net/Public/upload/300599b9cf421bea.jpg",
+          "tintro": "草帽海贼团、草帽大船团船长，极恶的世代之一。橡胶果实能力者，悬赏金5亿贝里。梦想是找到传说中的One Piece，成为海贼王。\r\n他性格积极乐观，爱憎分明且十分重视伙伴，不甘屈居于他人之下，对任何危险的事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而无故杀戮，而是享受着身为海贼的冒险和自由。从忘年交香克斯手里继承了海贼王罗杰的草帽[1] 。",
+          "tsimple": "海贼王",
+          "tscore": "100"
+        }
+      ],
+      "ymdhis": [
+        "1503417600",
+        "1503417600"
+      ],
+      "classnum": 2
+    }
+  ]
+}

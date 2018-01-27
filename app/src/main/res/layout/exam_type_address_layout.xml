@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="88pt"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/iv_header_left"
+                android:layout_width="40pt"
+                android:layout_height="40pt"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20pt"
+                android:src="@drawable/back_icon_nav" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择要参加的考试"
+            android:textColor="#333333"
+            android:textSize="34pt" />
+
+        <TextView
+            android:id="@+id/tv_header_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="24pt"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="完成"
+            android:textColor="#333333"
+            android:textSize="30pt" />
+
+
+    </LinearLayout>
+
+    <View style="@style/line_style"></View>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lsv_exame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:gravity="center"
+            android:scrollbars="none" />
+    </com.andview.refreshview.XRefreshView>
+</LinearLayout>

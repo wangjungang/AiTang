@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    tools:context="com.example.administrator.aitang.ui.mine.ChangeUserNameActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <TextView
+        style="@style/green_title_style"
+        android:text="@string/input_new_user_name" />
+
+    <EditText
+        android:id="@+id/et_new_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height_45dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:textColor="@color/color_323232"
+        android:singleLine="true"
+        android:textSize="@dimen/txt_14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_style"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="200pt"
+            android:text="@string/submit_change" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

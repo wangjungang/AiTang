@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--所有布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--正上方的布局-->
+        <RelativeLayout
+            android:id="@+id/view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="10pt">
+            <!--主播画面和第一个连麦观众画面-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="440pt"
+                android:orientation="horizontal">
+                <!--主播画面-->
+                <FrameLayout
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <!--主播的画面-->
+                    <FrameLayout
+                        android:id="@+id/master_video_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_meeting_background" />
+                    <!--全屏按钮-->
+                    <ImageView
+                        android:id="@+id/full_screen_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="20pt"
+                        android:layout_marginRight="20pt"
+                        android:background="@drawable/ic_full_screen"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <!--上方的控制条：返回键、房间id、切换摄像头、静音、互动-->
+
+            <RelativeLayout
+                android:id="@+id/back_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80pt">
+                <!--返回-->
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="60pt"
+                    android:layout_height="60pt"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40pt"
+                    android:background="@drawable/chat_room_back_arrow_selector" />
+
+                <!--房间号-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10pt"
+                    android:layout_toRightOf="@id/back_arrow"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/room_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:paddingLeft="10pt"
+                        android:paddingRight="10pt"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="26pt" />
+                </RelativeLayout>
+                <!--静音、切换摄像头、互动按钮-->
+                <include layout="@layout/permission_control_layout" />
+
+            </RelativeLayout>
+            <!--与服务器断开连接-->
+            <TextView
+                android:id="@+id/online_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20pt"
+                android:layout_marginTop="20pt"
+                android:background="@color/transparent"
+                android:padding="10pt"
+                android:text="@string/server_broken"
+                android:textColor="@color/color_red_ccfa3c55"
+                android:textSize="24pt"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!--切换按钮-->
+        <com.example.administrator.aitang.zhibo.im.ui.tab.PagerSlidingTabStrip
+            android:id="@+id/chat_room_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="20pt"
+            android:background="@color/white" />
+        <!--下面的布局切换-->
+        <com.example.administrator.aitang.zhibo.education.util.NonScrollViewPager
+            android:id="@+id/chat_room_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <!--全屏布局-->
+    <FrameLayout
+        android:id="@+id/full_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+        <!--全屏显示-->
+        <FrameLayout
+            android:id="@+id/full_screen_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"></FrameLayout>
+        <!--关闭全屏-->
+        <ImageView
+            android:id="@+id/cancel_full_screen_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="28pt"
+            android:layout_marginLeft="28pt"
+            android:background="@drawable/ic_cancel_full_screen"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

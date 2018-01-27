@@ -1,0 +1,141 @@
+apply plugin: 'com.android.application'
+android {
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.administrator.aitang"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "ee1c88aff0f66a47758b45ae", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    signingConfigs {    //签名设置
+        debug {
+            storeFile file("C:/Users/Administrator/Desktop/爱唐上线相关/keystore/aitang.jks")   //你的发布用keystore
+            storePassword "aitang" //你的store密码
+            keyAlias "aitang"  //别名
+            keyPassword "aitang"  //别名密码
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+//版本不兼容，这里强制使用26+版本
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.+'
+            }
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.+'
+            }
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+
+    })
+    compile files('libs/mpandroidchartlibrary-2-1-6.jar')
+    compile fileTree(include: '*.jar', dir: 'libs')
+    // 基础模块
+    // 实时会话和文档转码服务模块(版本号必须和基础模块一样)
+    //    // 音视频需要
+    //    compile 'com.netease.nimlib:avchat:3.3.0'
+    // 聊天室需要
+    //    // 全文检索服务需要
+    //    compile 'com.netease.nimlib:lucene:3.3.0'
+    //侧滑删除
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    //动态权限：https://github.com/yanzhenjie/AndPermission
+    //图片选择，知乎的开源组件：https://github.com/zhihu/Matisse
+    //极光推送
+    compile project(':socialhelper')
+    compile files('libs/alipaySdk-20170922.jar')
+
+    //侧滑删除
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.arialyy.aria:aria-core:3.3.7'
+    compile 'me.zhanghai.android.materialratingbar:library:1.2.0'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.arialyy.aria:aria-core:3.3.7'
+    compile 'me.zhanghai.android.materialratingbar:library:1.2.0'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.bulong.rudeness:rudeness:latest.release@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
+    compile 'com.youth.banner:banner:1.4.4'
+    compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
+    compile 'com.github.MagicMashRoom:SuperCalendar:v1.4'
+    compile 'com.necer.ncalendar:ncalendar:2.4.3'
+    compile 'com.fang:dashview:v1.0.0'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.yanzhenjie:permission:1.1.2'
+    compile 'com.zhihu.android:matisse:0.4.3'
+    compile 'cn.jiguang.sdk:jpush:3.1.0'
+    compile 'cn.jiguang.sdk:jcore:1.1.8'
+    compile 'com.linsea:universalvideoview:1.1.0@aar'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.arialyy.aria:aria-compiler:3.3.7'
+}

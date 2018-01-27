@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.zhibo.MingshiXinxiActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_08D2B2"
+                android:orientation="vertical"
+                android:paddingEnd="26pt"
+                android:paddingStart="26pt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130pt"
+                    android:layout_marginTop="77pt"
+                    android:orientation="horizontal">
+
+
+                    <!--老师的头像-->
+                    <ImageView
+                        android:id="@+id/tv_mingshixinxiAct_pic"
+                        android:layout_width="130pt"
+                        android:layout_height="130pt" />
+                    <!--姓名，描述，评分-->
+                    <LinearLayout
+                        android:layout_width="0pt"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="57pt"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!--姓名-->
+                        <TextView
+                            android:id="@+id/tv_mingshixinxiAct_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0pt"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_white"
+                            android:textSize="36pt" />
+                        <!--描述-->
+                        <TextView
+                            android:id="@+id/tv_mingshixinxiAct_dis"
+                            android:layout_width="match_parent"
+                            android:layout_height="0pt"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="@color/color_white"
+                            android:textSize="30pt" />
+                        <!--评分-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0pt"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.example.administrator.aitang.views.MyRatingBar
+                                android:id="@+id/tv_mingshixinxiAct_xingji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:numStars="2"
+                                app:clickable="false"
+                                app:starCount="5"
+                                app:starEmpty="@drawable/nostar_icon_pinglun"
+                                app:starFill="@drawable/starwhite_icon_lishikecheng"
+                                app:starHalf="@drawable/halfwhitestar_icon_lishikecheng"
+                                app:starImageSize="20pt"
+                                app:starStep="1"
+                                app:stepSize="Half" />
+                            <!--分数-->
+                            <TextView
+                                android:id="@+id/tv_mingshixinxiAct_fenshu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/color_white"
+                                android:textSize="24pt" />
+                            <!--分文字-->
+                            <TextView
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="分"
+                                android:textColor="@color/color_white"
+                                android:textSize="24pt" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_mingshixinxiAct_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="127pt"
+                    android:layout_marginTop="80pt"
+                    android:lineSpacingMultiplier="1.5"
+                    android:maxLines="4"
+                    android:textColor="@color/color_white"
+                    android:textSize="30pt" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="177pt"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingStart="26pt"
+                android:text="历史课程"
+                android:textColor="@color/color_323232"
+                android:textSize="34pt" />
+
+            <com.example.administrator.aitang.views.MyListView
+                android:id="@+id/mlsv_mingshixinxiAct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:divider="@color/color_E5E5E5"
+                android:dividerHeight="1pt"
+                android:listSelector="@color/touming" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

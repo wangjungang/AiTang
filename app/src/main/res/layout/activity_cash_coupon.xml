@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.mine.CashCouponActivity">
+
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_group_height_50dp"
+            android:background="@color/color_08D2B2"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:text="@string/cash_coupon_tip"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/txt_16sp" />
+
+    </LinearLayout>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.andview.refreshview.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--课程券-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="@color/color_line">
+
+
+                    <TextView
+                        android:id="@+id/course_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16dp"
+                        android:layout_marginTop="60pt"
+                        android:text="@string/course_coupon"
+                        android:textSize="@dimen/txt_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/course_tip"
+                        android:layout_marginLeft="@dimen/margin_16dp"
+                        android:layout_toRightOf="@+id/course_tip"
+                        android:text="@string/course_coupon_tip"
+                        android:textSize="@dimen/txt_14sp"
+
+                        />
+                </RelativeLayout>
+
+
+                <ListView
+                    android:id="@+id/lv_course_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
+
+                <TextView
+                    android:id="@+id/tv_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="400pt"
+                    android:gravity="center"
+                    android:text="没有可用券"
+                    android:textSize="40pt" />
+
+
+                <!--现金抵用券-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140pt"
+                    android:background="@color/color_line">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16dp"
+                        android:layout_marginTop="60pt"
+                        android:text="@string/cash_coupons"
+                        android:textSize="@dimen/txt_18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300pt"
+                    android:background="@color/color_08D2B2">
+
+                    <TextView
+                        android:id="@+id/tv_cash_coupons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout="@+id/tv_sign_days"
+                        android:text=""
+                        android:textColor="@color/color_white"
+                        android:textSize="60pt"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_20dp"
+                        android:text=""
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/txt_14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </com.andview.refreshview.XScrollView>
+
+    </com.andview.refreshview.XRefreshView>
+
+
+</LinearLayout>

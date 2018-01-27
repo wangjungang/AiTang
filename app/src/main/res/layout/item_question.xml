@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8pt">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="340pt"
+        android:layout_height="180pt"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="340pt"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8pt"
+        android:layout_marginTop="8pt"
+        android:drawableEnd="@drawable/weizhankai_button_default"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:paddingLeft="30pt"
+        android:paddingRight="30pt"
+        android:text=""
+        android:textColor="@color/color_323232"
+        android:textSize="30pt" />
+</LinearLayout>

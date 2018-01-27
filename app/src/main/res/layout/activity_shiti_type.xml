@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <View style="@style/line_style" />
+
+    <ListView
+        android:id="@+id/lsv_shiti_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:listSelector="@color/touming"
+        android:scrollbars="none" />
+
+</LinearLayout>

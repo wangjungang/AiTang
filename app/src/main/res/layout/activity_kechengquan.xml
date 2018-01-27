@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.zhibo.KechengquanActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <com.andview.refreshview.XRefreshView
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:background="@color/color_08D2B2"
+                android:gravity="center_vertical"
+                android:paddingStart="26pt"
+                android:text="积极参与活动有机会赢取课程专用券哦"
+                android:textColor="@color/color_white"
+                android:textSize="32pt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="144pt"
+                android:background="@color/color_F6F6F6"
+                android:paddingStart="26pt"
+                android:paddingTop="74pt"
+                android:text="每次限使用一张，少补不退"
+                android:textColor="@color/color_909090"
+                android:textSize="24pt" />
+
+            <com.example.administrator.aitang.views.MyListView
+                android:id="@+id/mlsv_kechengquanAct"
+                android:layout_width="match_parent"
+                android:layout_height="0pt"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="88pt"
+                android:layout_marginBottom="140pt"
+                android:layout_marginEnd="150pt"
+                android:layout_marginStart="150pt"
+                android:layout_marginTop="130pt"
+                android:background="@color/color_08D2B2"
+                android:text="确定"
+                android:textColor="@color/color_white"
+                android:textSize="36pt" />
+        </LinearLayout>
+    </com.andview.refreshview.XRefreshView>
+</LinearLayout>

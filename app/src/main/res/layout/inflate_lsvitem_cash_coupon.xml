@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200pt"
+    android:background="@color/color_white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="200pt"
+        android:layout_height="200pt">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_coupon_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:lines="1"
+                android:textColor="@color/color_646464"
+                android:textSize="50pt" />
+
+            <TextView
+                android:id="@+id/tv_coupon_price_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/tv_coupon_price"
+                android:textColor="@color/color_646464"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/course_coupon"
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="4pt"
+        android:layout_height="160pt"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/shape_dotted_line_vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40pt"
+                    android:textColor="@color/color_646464"
+                    android:text="共"/>
+                <TextView
+                    android:id="@+id/tv_coupon_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="40pt"
+                    android:textColor="@color/color_08D2B2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40pt"
+                    android:textColor="@color/color_646464"
+                    android:text="张"/>
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tv_coupon_count_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_coupon_count"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:textColor="@color/color_909090"
+                android:gravity="center"
+                android:lines="1"
+                android:text=""
+                android:textSize="@dimen/txt_14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

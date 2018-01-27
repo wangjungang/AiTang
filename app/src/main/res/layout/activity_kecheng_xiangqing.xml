@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.aitang.ui.zhibo.KechengXiangqingActivity">
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/include_headerview" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200pt"
+        android:background="@color/color_08D2B2"
+        android:paddingBottom="30pt"
+        android:paddingTop="22pt">
+
+        <TextView
+            android:id="@+id/tv_kechengxiangqingAct_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26pt"
+            android:maxLines="2"
+            android:text="111"
+            android:textColor="@color/color_white"
+            android:textSize="36pt" />
+
+        <Button
+            android:id="@+id/btn_kechengxiangqingAct_ljgm"
+            android:layout_width="180pt"
+            android:layout_height="50pt"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="35pt"
+            android:background="@color/color_08D2B2"
+            android:text="立即购买"
+            android:textColor="@color/color_white"
+            android:textSize="30pt" />
+
+        <ImageView
+            android:id="@+id/textView5"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_alignBottom="@+id/btn_kechengxiangqingAct_ljgm"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26pt"
+            android:src="@drawable/timeyellow_icon_disable" />
+
+        <TextView
+            android:id="@+id/tv_kechengxiangqingAct_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_marginStart="20pt"
+            android:layout_toEndOf="@+id/textView5"
+            android:textColor="@color/color_white"
+            android:textSize="24pt" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_kechengxiangqingAct"
+        android:layout_width="match_parent"
+        android:layout_height="190pt"
+        android:layout_gravity="center"
+        android:background="@color/color_white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_kechengxiangqingAct_kcjs"
+            android:layout_width="200pt"
+            android:layout_height="58pt"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_kcxq_rb_bacg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="课程介绍"
+            android:textColor="@drawable/selector_kcxq_rb_text"
+            android:textSize="30pt" />
+
+        <RadioButton
+            android:id="@+id/rb_kechengxiangqingAct_kcb"
+            android:layout_width="200pt"
+            android:layout_height="58pt"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="50pt"
+            android:background="@drawable/selector_kcxq_rb_bacg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="课程表"
+            android:textColor="@drawable/selector_kcxq_rb_text"
+            android:textSize="30pt" />
+
+        <RadioButton
+            android:id="@+id/rb_kechengxiangqingAct_lsjs"
+            android:layout_width="200pt"
+            android:layout_height="58pt"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="50pt"
+            android:background="@drawable/selector_kcxq_rb_bacg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="老师介绍"
+            android:textColor="@drawable/selector_kcxq_rb_text"
+            android:textSize="30pt" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"></FrameLayout>
+</LinearLayout>

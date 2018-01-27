@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:minHeight="200pt"
+    android:orientation="vertical"
+    android:paddingEnd="26pt"
+    android:paddingStart="26pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_inflate_lsvitem_laoshipingjia_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_323232"
+            android:textSize="30pt" />
+
+        <ImageView
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="62pt"
+            android:src="@drawable/timeyellow_icon_disable" />
+
+        <TextView
+            android:id="@+id/tv_inflate_lsvitem_laoshipingjia_time"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20pt"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="13897328973"
+            android:textColor="@color/color_909090"
+            android:textSize="22pt" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_inflate_lsvitem_laoshipingjia_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="67pt"
+        android:text="林可为老师讲得特别好，相当细致，脾气好还特别有耐心。"
+        android:textColor="@color/color_646464"
+        android:textSize="26pt" />
+    <!--评分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67pt"
+        android:orientation="horizontal">
+
+
+        <com.example.administrator.aitang.views.MyRatingBar
+            android:id="@+id/mrb_inflate_lsvitem_laoshipingjia_pingjia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:numStars="2"
+            app:clickable="false"
+            app:starCount="5"
+            app:starEmpty="@drawable/linestar_icon_pinglun"
+            app:starFill="@drawable/staryellow_icon_pinglun"
+            app:starHalf="@drawable/halfstar_icon_pinglun"
+            app:starImageSize="20pt"
+            app:starStep="1"
+            app:stepSize="Half" />
+        <!--分数-->
+        <TextView
+            android:id="@+id/tv_inflate_lsvitem_laoshipingjia_fenshu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_FF9B19"
+            android:textSize="24pt" />
+        <!--分文字-->
+        <TextView
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分"
+            android:textColor="@color/color_909090"
+            android:textSize="24pt" />
+    </LinearLayout>
+</LinearLayout>

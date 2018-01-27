@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_inflate_gvitem_tinum"
+    android:layout_width="65pt"
+    android:layout_height="65pt"
+    android:gravity="center"
+    android:textColor="#323232"
+    android:textSize="48pt">
+
+</TextView>

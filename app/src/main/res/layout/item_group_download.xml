@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sl_convertView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp">
+
+
+    <!--项目中我是任意复杂的原ContentItem布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_16dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:paddingTop="@dimen/margin_20dp">
+
+
+            <!--文字-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/text_style_16sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="如何突破笔试难关" />
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:text="课程摘要：两个月突破笔试难关"
+                    android:textSize="@dimen/txt_14sp" />
+                <!--时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timeyellow_icon_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_16dp"
+                        android:textColor="@color/color_text_black_54"
+                        android:textSize="@dimen/txt_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--头像-->
+                    <ImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="130pt"
+                        android:layout_height="130pt" />
+                    <!--老师介绍-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_teacher_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="林可为"
+                            android:textSize="@dimen/txt_14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_teacher_intro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:text="#笔试科目知名讲师"
+                            android:textSize="@dimen/txt_14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--播放按钮-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+
+                <ImageView
+                    android:id="@+id/btn_play"
+                    android:layout_width="100pt"
+                    android:layout_height="100pt"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/yuceshiti_icon_shouye" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/layout_item_progress" />
+
+
+            <!--<com.arialyy.simple.widget.SubStateLinearLayout-->
+                <!--android:id="@+id/child_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/include"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:visibility="gone" />-->
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_FF9B19"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

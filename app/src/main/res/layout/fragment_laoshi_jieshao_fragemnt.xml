@@ -1,0 +1,19 @@
+<com.andview.refreshview.XRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/xRefreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lsv_laoshijieshao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="2pt"
+        android:listSelector="@color/touming"
+        android:paddingEnd="24pt"
+        android:paddingStart="20pt"
+        android:scrollbars="none"
+        android:text="@string/hello_blank_fragment" />
+
+</com.andview.refreshview.XRefreshView>
+
